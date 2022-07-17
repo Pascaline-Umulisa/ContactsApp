@@ -1,20 +1,39 @@
 package com.example.mycontacts
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.mycontacts.databinding.ActivityMainBinding
+import com.example.mycontacts.databinding.ActivityViewContactBinding
+import com.squareup.picasso.Picasso
 
 class ViewContactActivity : AppCompatActivity() {
+    lateinit var binding:ActivityViewContactBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_contact)
+        binding= ActivityViewContactBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         getExtras()
+    }
+    fun getClicklisteners(){
+        binding.imgBack.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
     fun getExtras(){
         val extras=intent.extras
-        val name=extras?.getString("NAME","")
-        val email=extras?.getString("EMAIL","")
-
-        Toast.makeText(this,"$name:$email",Toast.LENGTH_LONG).show()
+        binding.tvContactname.text=extras?.getString("NAME","")
+        binding.tvEmailaddress.text=extras?.getString("EMAIL","")
+        binding.tvLocation.text=extras?.getString("ADDRESS","")
+        binding.tvPhonenumber.text=extras?.getString("NUMBER","")
+        val image=extras?.getString("IMAGE","")
+        Picasso.get().load(image)
+            .placeholder(R.drawable.ic_baseline_person_24)
+            .resize(300,300)
+            .centerCrop()
+//            .networkPolicy(NetworkPolicy.OFFLINE)
+            .into(binding.ivContact)
+//        Toast.makeText(this,"$name:$email",Toast.LENGTH_LONG).show()
     }
 }
