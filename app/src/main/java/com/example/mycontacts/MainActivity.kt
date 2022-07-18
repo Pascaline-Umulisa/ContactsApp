@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun displayContacts(){
-        var contac1=Contact("Pascaline Umulisa ","+250 786933554","HHHHHHH@gmail.com","616 Korongo road","https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60")
+        var contac1=Contact("Pascaline Umulisa ","+250 786933554","pascaline@gmail.com","616 Korongo road","https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60")
         var contac2=Contact("Elizabeth Ampurira ","+250 786933554","paccy@gmail.com","616 Korongo road","https://images.unsplash.com/photo-1572224384995-f9529873f379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
         var contac3=Contact("Verite Umuhoza Natete","+250 786933554","paccy@gmail.com","616 Korongo road","https://images.unsplash.com/photo-1539701938214-0d9736e1c16b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
         var contac4=Contact("Lucy Kalimi","+250 786933554","liz@gmail.com","616 Korongo road","https://images.unsplaaaaash.com/photo-1583994009785-37ec30bf9342?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
