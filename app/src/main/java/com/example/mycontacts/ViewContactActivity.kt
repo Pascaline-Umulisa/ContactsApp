@@ -15,6 +15,7 @@ class ViewContactActivity : AppCompatActivity() {
         binding= ActivityViewContactBinding.inflate(layoutInflater)
         setContentView(binding.root)
         getExtras()
+        getClicklisteners()
     }
     fun getClicklisteners(){
         binding.imgBack.setOnClickListener {
