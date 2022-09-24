@@ -1,1 +1,1 @@
-package com.example.mycontacts.modeldata class Contact(    var name:String,    var phoneNumber:String,    var email:String,    var address:String,    var image:String)
+package com.example.mycontacts.modelimport androidx.room.Entity@Entity(tableName="Contacts")data class Contact(    var contactId:Int,    var name:String,    var phoneNumber:String,    var email:String,    var address:String,    var image:String)
