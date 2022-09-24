@@ -1,16 +1,13 @@
 package com.example.mycontacts
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mycontacts.databinding.ContactListItemBinding
-import com.squareup.picasso.NetworkPolicy
+import com.example.mycontacts.model.Contact
+import com.example.mycontacts.ui.ViewContactActivity
 import com.squareup.picasso.Picasso
 
 class ContactsAdapter(var contacts:List<Contact>):
@@ -38,7 +35,7 @@ class ContactsAdapter(var contacts:List<Contact>):
            Toast.makeText(context,"You have clicked on ${currentContact.name}'s image",Toast.LENGTH_SHORT).show()
        }
         holder.binding.cvContact.setOnClickListener {
-            val intent=Intent(context,ViewContactActivity::class.java)
+            val intent=Intent(context, ViewContactActivity::class.java)
             intent.putExtra("EMAIL",currentContact.email)
             intent.putExtra("NAME",currentContact.name)
             intent.putExtra("NUMBER",currentContact.phoneNumber)

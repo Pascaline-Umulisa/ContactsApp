@@ -1,10 +1,9 @@
-package com.example.mycontacts
+package com.example.mycontacts.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.example.mycontacts.databinding.ActivityMainBinding
+import com.example.mycontacts.R
 import com.example.mycontacts.databinding.ActivityViewContactBinding
 import com.squareup.picasso.Picasso
 
@@ -19,7 +18,7 @@ class ViewContactActivity : AppCompatActivity() {
     }
     fun getClicklisteners(){
         binding.imgBack.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
     fun getExtras(){
