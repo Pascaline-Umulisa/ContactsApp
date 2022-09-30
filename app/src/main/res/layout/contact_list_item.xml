@@ -71,11 +71,11 @@
             app:srcCompat="@drawable/ic_baseline_person_24" />
 
 <!--        <ImageView-->
-<!--            android:id="@+id/imgContact"-->
+<!--            android:id="@+id/imgC"-->
 <!--            android:layout_width="0dp"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="24dp"-->
-<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginStart="28dp"-->
+<!--            android:layout_marginTop="52dp"-->
 <!--            app:layout_constraintStart_toStartOf="parent"-->
 <!--            app:layout_constraintTop_toTopOf="parent"-->
 <!--            app:srcCompat="@drawable/ic_baseline_person_24" />-->

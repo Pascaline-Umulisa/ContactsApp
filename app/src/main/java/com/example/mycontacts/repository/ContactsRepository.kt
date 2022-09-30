@@ -7,6 +7,7 @@ import com.example.mycontacts.model.Contact
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+
 class ContactsRepository {
     var database=ContactsDb.getDatabase(MyContacts.appContext)
 
@@ -18,5 +19,9 @@ class ContactsRepository {
 
     fun getContactById(contactId:Int):LiveData<Contact>{
         return database.contactDao().getContactById(contactId)
+    }
+
+    fun getAllContacts(): LiveData<List<Contact>> {
+        return database.contactDao().getAllContacts()
     }
 }

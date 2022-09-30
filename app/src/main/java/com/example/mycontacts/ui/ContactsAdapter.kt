@@ -23,13 +23,13 @@ class ContactsAdapter(var contacts:List<Contact>):
         holder.binding.tvNumber.text=currentContact.phoneNumber
         holder.binding.tvEmail.text=currentContact.email
         holder.binding.tvAddress.text=currentContact.address
-        Picasso.get().load(currentContact.image)
-            .error(R.drawable.ic_baseline_error_24)
-            .placeholder(R.drawable.ic_baseline_person_24)
-            .resize(150,150)
-            .centerCrop()
-//            .networkPolicy(NetworkPolicy.OFFLINE)
-            .into(holder.binding.imgContact)
+//        Picasso.get().load(currentContact.image)
+//            .error(R.drawable.ic_baseline_error_24)
+//            .placeholder(R.drawable.ic_baseline_person_24)
+//            .resize(150,150)
+//            .centerCrop()
+////            .networkPolicy(NetworkPolicy.OFFLINE)
+//            .into(holder.binding.imgContact)
         val context=holder.itemView.context
        holder.binding.imgContact.setOnClickListener {
            Toast.makeText(context,"You have clicked on ${currentContact.name}'s image",Toast.LENGTH_SHORT).show()
@@ -41,7 +41,7 @@ class ContactsAdapter(var contacts:List<Contact>):
             intent.putExtra("NUMBER",currentContact.phoneNumber)
             intent.putExtra("ADDRESS",currentContact.address)
             intent.putExtra("ADDRESS",currentContact.address)
-            intent.putExtra("IMAGE",currentContact.image)
+//            intent.putExtra("IMAGE",currentContact.image)
             context.startActivity(intent)
         }
     }
