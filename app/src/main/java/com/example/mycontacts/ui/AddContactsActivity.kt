@@ -30,17 +30,37 @@ class AddContactsActivity : AppCompatActivity() {
         var phoneNumber=binding.etPhone.text.toString()
         var address=binding.etAddress.text.toString()
         //validate
+        var error = false
 
-        val contact=Contact(
-            contactId = 0,
-            name = name,
-            phoneNumber=phoneNumber,
-            email = email,
-            address=address,
-            image = ""
-        )
-        contactsViewModel.saveContact(contact)
-        finish()
+        if (name.isBlank()) {
+            error = true
+            binding.etName.error = "name is required"
+        }
+        if (email.isBlank()) {
+            error = true
+            binding.etEmail.error = " Email is required"
+        }
+        if (address.isBlank()) {
+            error = true
+            binding.etAddress.error = "Address is required"
+        }
+        if (phoneNumber.isBlank()) {
+            error = true
+            binding.etPhone.error = "PhoneNumber is required"
+        }
+        if(!error){
+            val contact=Contact(
+                contactId = 0,
+                name = name,
+                phoneNumber=phoneNumber,
+                email = email,
+                address=address,
+                image = ""
+            )
+            contactsViewModel.saveContact(contact)
+            finish()
+        }
+
 
     }
 }
